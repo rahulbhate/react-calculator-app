@@ -39,32 +39,7 @@ class App extends Component {
   clearInput = () => {
     this.setState({ input: "" });
   };
-
-  add = value => {
-    this.setState({
-      previousNumber: this.state.input,
-      input: "",
-      operator: value
-    });
-  };
-
-  subtract = value => {
-    this.setState({
-      previousNumber: this.state.input,
-      input: "",
-      operator: value
-    });
-  };
-
-  multiply = value => {
-    this.setState({
-      previousNumber: this.state.input,
-      input: "",
-      operator: value
-    });
-  };
-
-  divide = value => {
+  selectOperator = value => {
     this.setState({
       previousNumber: this.state.input,
       input: "",
@@ -113,25 +88,25 @@ class App extends Component {
             <Button handleClick={this.addToInput}>7</Button>
             <Button handleClick={this.addToInput}>8</Button>
             <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.divide}>/</Button>
+            <Button handleClick={this.selectOperator}>/</Button>
           </div>
           <div className="row">
             <Button handleClick={this.addToInput}>4</Button>
             <Button handleClick={this.addToInput}>5</Button>
             <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.multiply}>*</Button>
+            <Button handleClick={this.selectOperator}>*</Button>
           </div>
           <div className="row">
             <Button handleClick={this.addToInput}>1</Button>
             <Button handleClick={this.addToInput}>2</Button>
             <Button handleClick={this.addToInput}>3</Button>
-            <Button handleClick={this.add}>+</Button>
+            <Button handleClick={this.selectOperator}>+</Button>
           </div>
           <div className="row">
             <Button handleClick={this.addDecimal}>.</Button>
             <Button handleClick={this.addZeroToInput}>0</Button>
             <Button handleClick={this.evaluate}>=</Button>
-            <Button handleClick={this.subtract}>-</Button>
+            <Button handleClick={this.selectOperator}>-</Button>
           </div>
           <div className="row">
             <ClearButton handleClear={this.clearInput}>Clear</ClearButton>

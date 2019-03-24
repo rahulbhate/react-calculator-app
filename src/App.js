@@ -51,7 +51,7 @@ class App extends Component {
   subtract = () => {
     this.setState({ previousNumber: this.state.input });
     this.setState({ input: "" });
-    this.setState({ operator: "subtrack" });
+    this.setState({ operator: "subtract" });
   };
   
   multiply = () => {
